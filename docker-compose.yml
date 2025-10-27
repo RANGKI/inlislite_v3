@@ -1,0 +1,37 @@
+services:
+  inlislite:
+    image: pizaini/inlislite
+    container_name: inlislite_app
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    volumes:
+      # Mount the local app folder for live editing in VSCode
+      - ./app:/app/web
+      # Optional: persist uploads or logs
+      - ./uploads:/app/web/uploaded_files
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_DATABASE: pemilos_stembase_2025
+      DB_USERNAME: root
+      DB_PASSWORD: root
+
+  db:
+    image: mariadb:10.3
+    container_name: inlislite_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: inlislite_v3
+      MYSQL_USER: inlis
+      MYSQL_PASSWORD: inlis
+    ports:
+      - "9999:3306"
+    volumes:
+      - ./db/inlislite_v3_dump.sql:/docker-entrypoint-initdb.d/inlislite_v3_dump.sql
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

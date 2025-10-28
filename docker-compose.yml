@@ -8,7 +8,7 @@ services:
       - db
     volumes:
       # Mount the local app folder for live editing in VSCode
-      - ./app:/app/web
+      - ./app:/src
       # Optional: persist uploads or logs
       - ./uploads:/app/web/uploaded_files
     environment:

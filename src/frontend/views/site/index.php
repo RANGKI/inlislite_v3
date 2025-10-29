@@ -1,10 +1,8 @@
 <?php
 /* @var $this yii\web\View */
 use yii\helpers\Url;
-
 $this->title = 'Portal Aplikasi Inlis Lite';
 ?>
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -16,45 +14,58 @@ $this->title = 'Portal Aplikasi Inlis Lite';
     <link rel="stylesheet" href="<?= Url::to('@web/css/site.css') ?>">
 </head>
 <body>
+    <!-- Background Animation -->
+    <div class="background-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+    </div>
+    
     <header class="header">
         <div class="container header-content">
-            <?= yii\helpers\Html::img(Url::base().'/'.Url::to('uploaded_files/aplikasi/inlislite.png'), [
-                'alt' => 'Portal Aplikasi Inlis Lite', 
-                'class' => 'logo'
+            <?= yii\helpers\Html::img(Url::base().'/'.Url::to('uploaded_files/aplikasi/stemba.png'), [
+                'alt' => 'Portal Aplikasi Inlis Lite',
+                'class' => 'logo animate-fade-in'
             ]) ?>
-            <h1>Portal Aplikasi Inlis Lite</h1>
-            <p>Selamat datang di portal layanan perpustakaan digital terpadu. Akses berbagai layanan dengan mudah dan cepat.</p>
+            <h1 class="animate-slide-down">Portal Perpustakaan SMKN 7 Semarang</h1>
+            <p class="animate-fade-in-delay">
+                Selamat datang di portal perpustakaan digital SMKN 7 Semarang. Temukan berbagai koleksi buku, jurnal, dan sumber belajar yang dapat diakses dengan mudah di mana saja dan kapan saja.
+            </p>
         </div>
     </header>
-
+    
     <main class="main-content">
         <div class="container">
-            <section class="welcome-section">
-                <h2>Layanan Perpustakaan Digital Terpadu</h2>
-                <p>Inlis Lite menyediakan berbagai layanan perpustakaan digital yang dapat diakses kapan saja dan di mana saja. Pilih layanan yang Anda butuhkan di bawah ini.</p>
+            <section class="welcome-section animate-fade-in">
+                <h2>Layanan Perpustakaan Digital</h2>
+                <p>
+                    Perpustakaan SMKN 7 Semarang hadir untuk mendukung kegiatan belajar dan literasi seluruh warga sekolah. 
+                    Akses katalog digital, peminjaman buku, serta informasi kegiatan literasi melalui portal ini.
+                </p>
             </section>
-
+            
             <div class="stats-section">
-                <div class="stat-item">
+                <div class="stat-item animate-slide-up" style="--delay: 0.1s;">
                     <span class="stat-number">15K+</span>
                     <span class="stat-label">Koleksi Buku</span>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item animate-slide-up" style="--delay: 0.2s;">
                     <span class="stat-number">8K+</span>
                     <span class="stat-label">Anggota Aktif</span>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item animate-slide-up" style="--delay: 0.3s;">
                     <span class="stat-number">24/7</span>
                     <span class="stat-label">Layanan Digital</span>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item animate-slide-up" style="--delay: 0.4s;">
                     <span class="stat-number">99%</span>
                     <span class="stat-label">Kepuasan Pengguna</span>
                 </div>
             </div>
-
+            
             <div class="portal-grid">
-                <div class="portal-card">
+                <div class="portal-card animate-fade-in" style="--delay: 0.1s;">
                     <div class="card-icon">
                         <i class="fas fa-tachometer-alt"></i>
                     </div>
@@ -64,8 +75,8 @@ $this->title = 'Portal Aplikasi Inlis Lite';
                         <a href="<?= Url::to('backend') ?>" target="_blank" class="btn">Masuk</a>
                     </div>
                 </div>
-
-                <div class="portal-card">
+                
+                <div class="portal-card animate-fade-in" style="--delay: 0.2s;">
                     <div class="card-icon">
                         <i class="fas fa-book-reader"></i>
                     </div>
@@ -75,8 +86,8 @@ $this->title = 'Portal Aplikasi Inlis Lite';
                         <a href="<?= Url::to('bacaditempat') ?>" target="_blank" class="btn btn-secondary">Akses</a>
                     </div>
                 </div>
-
-                <div class="portal-card">
+                
+                <div class="portal-card animate-fade-in" style="--delay: 0.3s;">
                     <div class="card-icon">
                         <i class="fas fa-book-open"></i>
                     </div>
@@ -86,8 +97,8 @@ $this->title = 'Portal Aplikasi Inlis Lite';
                         <a href="<?= Url::to('opac') ?>" target="_blank" class="btn btn-accent">Jelajahi</a>
                     </div>
                 </div>
-
-                <div class="portal-card">
+                
+                <div class="portal-card animate-fade-in" style="--delay: 0.4s;">
                     <div class="card-icon">
                         <i class="fas fa-users"></i>
                     </div>
@@ -97,8 +108,8 @@ $this->title = 'Portal Aplikasi Inlis Lite';
                         <a href="<?= Url::to('keanggotaan') ?>" target="_blank" class="btn btn-info">Kelola</a>
                     </div>
                 </div>
-
-                <div class="portal-card">
+                
+                <div class="portal-card animate-fade-in" style="--delay: 0.5s;">
                     <div class="card-icon">
                         <i class="fas fa-book"></i>
                     </div>
@@ -108,8 +119,8 @@ $this->title = 'Portal Aplikasi Inlis Lite';
                         <a href="<?= Url::to('digitalcollection') ?>" target="_blank" class="btn btn-accent">Jelajahi</a>
                     </div>
                 </div>
-
-                <div class="portal-card">
+                
+                <div class="portal-card animate-fade-in" style="--delay: 0.6s;">
                     <div class="card-icon">
                         <i class="fas fa-clipboard-list"></i>
                     </div>
@@ -119,8 +130,8 @@ $this->title = 'Portal Aplikasi Inlis Lite';
                         <a href="<?= Url::to('guestbook') ?>" target="_blank" class="btn">Isi Buku Tamu</a>
                     </div>
                 </div>
-
-                <div class="portal-card">
+                
+                <div class="portal-card animate-fade-in" style="--delay: 0.7s;">
                     <div class="card-icon">
                         <i class="fas fa-user-plus"></i>
                     </div>
@@ -130,8 +141,8 @@ $this->title = 'Portal Aplikasi Inlis Lite';
                         <a href="<?= Url::to('pendaftaran') ?>" target="_blank" class="btn btn-secondary">Daftar Sekarang</a>
                     </div>
                 </div>
-
-                <div class="portal-card">
+                
+                <div class="portal-card animate-fade-in" style="--delay: 0.8s;">
                     <div class="card-icon">
                         <i class="fas fa-chart-bar"></i>
                     </div>
@@ -141,8 +152,8 @@ $this->title = 'Portal Aplikasi Inlis Lite';
                         <a href="<?= Url::to('statistik-perkembangan-perpustakaan') ?>" target="_blank" class="btn btn-info">Lihat Statistik</a>
                     </div>
                 </div>
-
-                <div class="portal-card">
+                
+                <div class="portal-card animate-fade-in" style="--delay: 0.9s;">
                     <div class="card-icon">
                         <i class="fas fa-poll"></i>
                     </div>
@@ -152,8 +163,8 @@ $this->title = 'Portal Aplikasi Inlis Lite';
                         <a href="<?= Url::to('survey') ?>" target="_blank" class="btn">Ikuti Survey</a>
                     </div>
                 </div>
-
-                <div class="portal-card">
+                
+                <div class="portal-card animate-fade-in" style="--delay: 1.0s;">
                     <div class="card-icon">
                         <i class="fas fa-exchange-alt"></i>
                     </div>
@@ -163,8 +174,8 @@ $this->title = 'Portal Aplikasi Inlis Lite';
                         <a href="<?= Url::to('peminjamanmandiri') ?>" target="_blank" class="btn btn-warning">Pinjam Buku</a>
                     </div>
                 </div>
-
-                <div class="portal-card">
+                
+                <div class="portal-card animate-fade-in" style="--delay: 1.1s;">
                     <div class="card-icon">
                         <i class="fas fa-undo-alt"></i>
                     </div>
@@ -174,8 +185,8 @@ $this->title = 'Portal Aplikasi Inlis Lite';
                         <a href="<?= Url::to('pengembalianmandiri') ?>" target="_blank" class="btn btn-warning">Kembalikan Buku</a>
                     </div>
                 </div>
-
-                <div class="portal-card">
+                
+                <div class="portal-card animate-fade-in" style="--delay: 1.2s;">
                     <div class="card-icon">
                         <i class="fas fa-newspaper"></i>
                     </div>
@@ -188,20 +199,27 @@ $this->title = 'Portal Aplikasi Inlis Lite';
             </div>
         </div>
     </main>
-
+    
+<!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2023 Portal Aplikasi Inlis Lite. Semua hak cipta dilindungi.</p>
-            <p>Layanan Perpustakaan Digital Terpadu</p>
-            <div class="footer-links">
-                <a href="#">Kebijakan Privasi</a>
-                <a href="#">Syarat & Ketentuan</a>
-                <a href="#">Bantuan</a>
-                <a href="#">Kontak</a>
+        <div class="container footer-inner">
+            <div class="footer-left">
+                <p>&copy; <?= date('Y') ?> <strong>Inlis Lite</strong>. Semua hak cipta dilindungi.</p>
+                <!-- <div class="footer-links">
+                    <a href="#">Panduan</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Kontak</a>
+                </div> -->
+            </div>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </footer>
-
+    
     <script src="<?= Url::to('@web/js/app.js') ?>"></script>
 </body>
 </html>

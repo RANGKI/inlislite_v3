@@ -10,7 +10,7 @@ services:
       # Mount the local app folder for live editing in VSCode
       - ./src:/app/web
       # Optional: persist uploads or logs
-      - ./uploads:/app/web/uploaded_files
+      # - ./uploads:/app/web/uploaded_files
     environment:
       DB_HOST: db
       DB_PORT: 3306

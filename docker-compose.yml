@@ -1,6 +1,6 @@
 services:
   inlislite:
-    image: pizaini/inlislite
+    image: inlislite_v3-inlislite:latest
     container_name: inlislite_app
     ports:
       - "8080:80"
@@ -8,7 +8,7 @@ services:
       - db
     volumes:
       # Mount the local app folder for live editing in VSCode
-      - ./app:/src
+      - ./src:/app/web
       # Optional: persist uploads or logs
       - ./uploads:/app/web/uploaded_files
     environment:
